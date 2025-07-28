@@ -17,13 +17,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-
-      - name: npm ci
-        run: npm ci
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install vite@latest
+        run: npm ci
 
       - name: Run tests
         run: npm test --if-present
